@@ -118,7 +118,7 @@ router.post('/login', (req, res) => {
 // @Desc    Return current user
 // @access  Private
 
-router.get('/current', passport.authenticate('jwt', {session: false}), (req, res) => {
+router.get('/current', passport.authenticate('jwt', { session: false }), (req, res) => {
     const { id, name, email } = req.user
     res.json({
         id,
